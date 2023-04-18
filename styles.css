@@ -9,7 +9,6 @@
 }
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     background: black;
@@ -65,4 +64,88 @@ nav ul li a {
 
 a:hover {
     color: #ffde7a;
+}
+
+#container {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    position: absolute;
+    width: 50%;
+    height: 80px;
+    border: lightgray 2px solid;
+    border-radius: 10px;
+
+    animation: fadeInAnimation ease 2s;
+}
+
+.box2 {
+    position: absolute;
+    width: 50%;
+    margin-top: 100px;
+    height: 80px;
+    border: lightgray 2px solid;
+    border-radius: 10px;
+
+    animation: fadeInAnimation ease 2.5s;
+}
+
+.box3 {
+    position: absolute;
+    width: 50%;
+    margin-top: 200px;
+    height: 80px;
+    border: lightgray 2px solid;
+    border-radius: 10px;
+
+    animation: fadeInAnimation ease 3s;
+}
+
+.box4 {
+    position: absolute;
+    width: 50%;
+    margin-top: 300px;
+    height: 80px;
+    border: lightgray 2px solid;
+    border-radius: 10px;
+
+    animation: fadeInAnimation ease 3.5s;
+}
+
+.box5 {
+    position: absolute;
+    width: 50%;
+    margin-top: 400px;
+    height: 80px;
+    border: lightgray 2px solid;
+    border-radius: 10px;
+
+    animation: fadeInAnimation ease 4s;
+}
+
+#socials-container {
+    position: fixed;
+    width: 60px;
+    height: 200px;
+    border: #ffde7a 2px solid;
+    margin-top: calc(50vh - 200px);
+    margin-left: 10px;
+    border-radius: 10px;
+    align-content: center;
+    display: flex;
+
+    animation: fadeInAnimation ease 4s;
+}
+
+.social-link {
+    position: absolute;
+    padding: 5px;
+    background-color: transparent;
 }
