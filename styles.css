@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "Proxima Nova Extra Condensed";
+    src: url("fonts/Proxima-Nova-Extra-Condensed/Demo_Fonts/Fontspring-DEMO-proximanova-regular.otf");
+}
+
+@font-face {
+    font-family: "Proxima Nova Extra Condensed Bold";
+    src: url("fonts/Proxima-Nova-Extra-Condensed/Demo_Fonts/Fontspring-DEMO-proximanova-bold.otf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: 'Proxima Nova Extra Condensed Bold', sans-serif;
+    font-size: 18px;
+    line-height: 0;
+
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+header {
+    padding: 20px;
+    align-content: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 20px 40px;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    transition: color 0.75s ease;
+}
+
+a:hover {
+    color: #ffde7a;
+}
