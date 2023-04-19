@@ -1,14 +1,21 @@
+let socials = ["github", "twitter", "spigot"]
+
+let socialLinks = ["https://github.com/LiamKinghouser", "https://twitter.com/liamkinghouser", "https://www.spigotmc.org/members/juvoo.987014/"]
+
 window.onload = function() {
-    let social = document.createElement('a')
-    social.classList.add('social-link')
-    social.setAttribute('href', 'https://twitter.com/liamkinghouser')
-    social.setAttribute('target', '_blank')
+    let socialsContainer = document.getElementById('socials-container')
 
-    document.getElementById('socials-container').appendChild(social)
+    for (let i = 0; i < socials.length; i++) {
+        let social = document.createElement('a')
+        social.setAttribute('class', 'social-link')
+        social.setAttribute('href', socialLinks[i])
+        social.setAttribute('target', '_blank')
 
-    let icon = document.createElement('ion-icon')
-    icon.setAttribute('name', 'logo-twitter')
+        let icon = document.createElement('ion-icon')
+        icon.setAttribute('name', 'logo-' + socials[i])
 
-    social.appendChild(icon)
-    social.appendChild(icon.cloneNode())
+        social.appendChild(icon)
+
+        socialsContainer.appendChild(social)
+    }
 }

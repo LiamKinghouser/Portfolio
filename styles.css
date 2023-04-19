@@ -1,6 +1,10 @@
+:root {
+    --yellow: #ffde7a;
+}
+
 @font-face {
-    font-family: "Proxima Nova Extra Condensed";
-    src: url("fonts/Proxima-Nova-Extra-Condensed/Demo_Fonts/Fontspring-DEMO-proximanova-regular.otf");
+    font-family: "Proxima Nova Extra Thin";
+    src: url("fonts/Proxima-Nova-Extra-Condensed/Demo_Fonts/Fontspring-DEMO-proximanovacond-semibold.otf");
 }
 
 @font-face {
@@ -8,11 +12,15 @@
     src: url("fonts/Proxima-Nova-Extra-Condensed/Demo_Fonts/Fontspring-DEMO-proximanova-bold.otf");
 }
 
+@font-face {
+    font-family: "Astro Space";
+    src: url("fonts/dispence-font/Dispence-odxz.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
     background: black;
-    color: white;
 }
 
 @keyframes fadeInAnimation {
@@ -54,6 +62,7 @@ nav ul li {
 }
 
 nav ul li a {
+    color: white;
     position: relative;
     text-decoration: none;
     -webkit-user-select: none; /* Chrome/Safari */
@@ -63,17 +72,33 @@ nav ul li a {
 }
 
 a:hover {
-    color: #ffde7a;
+    color: var(--yellow);
+}
+
+#footer-info-container-left {
+    position: absolute;
+    height: 40px;
+    color: white;
+    font-size: 12px;
+    float: left;
+    bottom: 0;
+    padding-left: 20px;
 }
 
 #container {
     position: absolute;
     width: 100%;
     height: fit-content;
-    background-color: white;
     align-content: center;
     display: flex;
     justify-content: center;
+}
+
+#container p {
+    font-family: "Astro Space", "sans-serif";
+    font-size: 36px;
+    color: white;
+    padding: 20px;
 }
 
 .box {
@@ -86,66 +111,32 @@ a:hover {
     animation: fadeInAnimation ease 2s;
 }
 
-.box2 {
-    position: absolute;
-    width: 50%;
-    margin-top: 100px;
-    height: 80px;
-    border: lightgray 2px solid;
-    border-radius: 10px;
-
-    animation: fadeInAnimation ease 2.5s;
-}
-
-.box3 {
-    position: absolute;
-    width: 50%;
-    margin-top: 200px;
-    height: 80px;
-    border: lightgray 2px solid;
-    border-radius: 10px;
-
-    animation: fadeInAnimation ease 3s;
-}
-
-.box4 {
-    position: absolute;
-    width: 50%;
-    margin-top: 300px;
-    height: 80px;
-    border: lightgray 2px solid;
-    border-radius: 10px;
-
-    animation: fadeInAnimation ease 3.5s;
-}
-
-.box5 {
-    position: absolute;
-    width: 50%;
-    margin-top: 400px;
-    height: 80px;
-    border: lightgray 2px solid;
-    border-radius: 10px;
-
-    animation: fadeInAnimation ease 4s;
-}
-
 #socials-container {
     position: fixed;
-    width: 60px;
     height: 200px;
-    border: #ffde7a 2px solid;
+    border: var(--yellow) 2px solid;
     margin-top: calc(50vh - 200px);
     margin-left: 10px;
     border-radius: 10px;
-    align-content: center;
-    display: flex;
+    display: inline-block;
+    box-sizing: border-box;
+    z-index: 2;
+    background-color: transparent;
 
     animation: fadeInAnimation ease 4s;
 }
 
 .social-link {
-    position: absolute;
-    padding: 5px;
+    border: transparent 2px solid;
+    position: relative;
+    padding: 10px;
     background-color: transparent;
+    color: white;
+    display: flex;
+    font-size: 30px;
+    transition: color 0.75s ease;
+}
+
+.social-link:hover {
+    color: var(--yellow);
 }
