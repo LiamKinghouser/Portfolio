@@ -7,15 +7,22 @@ window.onload = function() {
 
     for (let i = 0; i < socials.length; i++) {
         let social = document.createElement('a')
-        social.setAttribute('class', 'social-link')
         social.setAttribute('href', socialLinks[i])
         social.setAttribute('target', '_blank')
 
         if (socials[i] === "spigot") {
-            let button = document.createElement('button')
+            /*
             let image = document.createElement('img')
+            image.setAttribute('src', 'icons/spigot.svg')
+            image.setAttribute('class', 'social-link')
+            social.appendChild(image)
+            socialsContainer.appendChild(social)
+
+             */
             continue
         }
+
+        social.setAttribute('class', 'social-link')
 
         let icon = document.createElement('ion-icon')
         icon.setAttribute('name', 'logo-' + socials[i])
