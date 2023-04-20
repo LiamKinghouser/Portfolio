@@ -14,7 +14,7 @@
 
 @font-face {
     font-family: "Astro Space";
-    src: url("fonts/dispence-font/Dispence-odxz.ttf");
+    src: url("fonts/a-astro-space-font/AstroSpace-eZ2Bg.ttf");
 }
 
 * {
@@ -139,4 +139,8 @@ a:hover {
 
 .social-link:hover {
     color: var(--yellow);
+}
+
+.social-link a img {
+    font-size: 40px;
 }

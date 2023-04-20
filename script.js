@@ -11,6 +11,12 @@ window.onload = function() {
         social.setAttribute('href', socialLinks[i])
         social.setAttribute('target', '_blank')
 
+        if (socials[i] === "spigot") {
+            let button = document.createElement('button')
+            let image = document.createElement('img')
+            continue
+        }
+
         let icon = document.createElement('ion-icon')
         icon.setAttribute('name', 'logo-' + socials[i])
 
