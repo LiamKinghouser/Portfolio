@@ -21,6 +21,10 @@
     margin: 0;
     padding: 0;
     background: black;
+
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
 }
 
 @keyframes fadeInAnimation {
@@ -40,6 +44,16 @@ body {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
+
+h1 {
+    cursor: default;
+    background-color: transparent;
+}
+
+p {
+    cursor: default;
+    background-color: transparent;
 }
 
 header {
@@ -65,9 +79,6 @@ nav ul li a {
     color: white;
     position: relative;
     text-decoration: none;
-    -webkit-user-select: none; /* Chrome/Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+ */
     transition: color 0.75s ease;
 }
 
@@ -85,29 +96,59 @@ a:hover {
 }
 
 #container {
+    top: 25%;
     position: absolute;
     width: 100%;
-    height: fit-content;
-    align-content: center;
     display: flex;
     justify-content: center;
+    vertical-align: center;
 }
 
-#container p {
+#header-container {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    display: inline-block;
+}
+
+#header-container h1 {
     font-family: "Astro Space", "sans-serif";
-    font-size: 36px;
+    font-size: 48px;
     color: white;
     padding: 20px;
 }
 
-.box {
-    position: absolute;
-    width: 50%;
-    height: 800px;
-    border: lightgray 2px solid;
-    border-radius: 10px;
+#header-container h1:hover {
 
-    animation: fadeInAnimation ease 2s;
+}
+
+#header-container p {
+    font-size: 24px;
+    color: var(--yellow);
+    padding: 20px;
+}
+
+#skills-container {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    align-content: center;
+    display: flex;
+    top: 250px;
+    border: var(--yellow) 2px solid;
+    border-radius: 10px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.skill {
+    font-size: 18px;
+    line-height: 18px;
+    color: white;
+    background-color: transparent;
+    cursor: default;
 }
 
 #socials-container {
@@ -121,7 +162,7 @@ a:hover {
     z-index: 2;
     background-color: transparent;
 
-    animation: fadeInAnimation ease 4s;
+    animation: fadeInAnimation ease 3s;
 }
 
 .social-link {
