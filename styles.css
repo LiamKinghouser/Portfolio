@@ -77,14 +77,11 @@ a:hover {
 
 #footer-info-container-left {
     position: fixed;
-    height: 40px;
-    width: 100%;
     color: white;
     font-size: 12px;
     float: left;
-    bottom: 0;
+    bottom: 30px;
     padding-left: 20px;
-    padding-bottom: 20px;
 }
 
 #container {
@@ -115,7 +112,6 @@ a:hover {
 
 #socials-container {
     position: fixed;
-    height: 200px;
     border: var(--yellow) 2px solid;
     margin-top: calc(50vh - 200px);
     margin-left: 10px;
