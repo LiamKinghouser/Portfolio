@@ -1,5 +1,6 @@
 :root {
     --yellow: #ffde7a;
+    --darkgray: #333333;
 }
 
 @font-face {
@@ -39,7 +40,6 @@
 body {
     font-family: 'Proxima Nova Extra Condensed Bold', sans-serif;
     font-size: 18px;
-    line-height: 0;
 
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
@@ -75,15 +75,25 @@ nav ul li {
     margin: 20px 40px;
 }
 
-nav ul li a {
+nav ul li a:not([data-attr="ion-icon"]) {
     color: white;
     position: relative;
     text-decoration: none;
     transition: color 0.75s ease;
 }
 
-a:hover {
+nav ul li a:not([data-attr="ion-icon"]):hover {
     color: var(--yellow);
+}
+
+#logo {
+    border: transparent 2px solid;
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    font-size: 60px;
+    transition: font-size 0.75s ease;
+    color: white;
 }
 
 #footer-info-container-left {
@@ -119,12 +129,8 @@ a:hover {
     padding: 20px;
 }
 
-#header-container h1:hover {
-
-}
-
 #header-container p {
-    font-size: 24px;
+    font-size: 20px;
     color: var(--yellow);
     padding: 20px;
 }
@@ -149,6 +155,16 @@ a:hover {
     color: white;
     background-color: transparent;
     cursor: default;
+}
+
+.skill-separator {
+    font-size: 18px;
+    font-family: "Astro Space", serif;
+    line-height: 18px;
+    color: white;
+    background-color: transparent;
+    cursor: default;
+    padding: 0 80px 0 80px;
 }
 
 #socials-container {
@@ -178,4 +194,58 @@ a:hover {
 
 .social-link:hover {
     color: var(--yellow);
+}
+
+#projects-container {
+    position: absolute;
+    width: 75vw;
+    height: fit-content;
+    display: grid;
+    gap: 15px 15px;
+    grid-template-columns: calc((75vw / 3) - 10px) calc((75vw / 3) - 10px) calc((75vw / 3) - 10px);
+}
+
+.project {
+    position: relative;
+    height: calc((75vw / 3) - 10px);
+    border-radius: 10px;
+    background-color: var(--darkgray);
+    transition: 0.5s ease;
+
+    color: var(--yellow);
+    text-align: center;
+    font-size: 16px;
+    white-space: pre-wrap;
+}
+
+.project:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+}
+
+.project-read-more {
+    position: absolute;
+    border: var(--yellow) 2px solid;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    background-color: var(--darkgray);
+    color: var(--yellow)
+}
+
+.page-title-container {
+    position: absolute;
+    width: 75vw;
+    height: fit-content;
+    bottom: 60px;
+}
+
+.page-title {
+    position: absolute;
+    left: 0;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    font-size: 30px;
+    line-height: 30px;
 }

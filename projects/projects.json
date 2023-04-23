@@ -1,0 +1,13 @@
+{
+  "projects": [
+
+    {
+      "name": "Map Camera",
+      "description": "Minecraft plugin that lets users create a live updating map of their screen for other players to see"
+    },
+    {
+      "name": "Auto Code Verify",
+      "description": "Chrome Extension that automatically shows a popup with verification codes sent to the users email"
+    }
+  ]
+}
