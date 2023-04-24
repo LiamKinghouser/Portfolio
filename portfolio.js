@@ -45,6 +45,8 @@ function setProjects() {
             }
         })
         .catch(error => console.log(error));
+
+    console.log(parseFloat("3.936"))
 }
 
 class Project {
