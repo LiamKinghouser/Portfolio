@@ -103,6 +103,7 @@ nav ul li a:not([data-attr="ion-icon"]):hover {
     float: left;
     bottom: 30px;
     padding-left: 20px;
+    background-color: transparent;
 }
 
 #container {
@@ -211,26 +212,65 @@ nav ul li a:not([data-attr="ion-icon"]):hover {
     border-radius: 10px;
     background-color: var(--darkgray);
     transition: 0.5s ease;
-
-    color: var(--yellow);
-    text-align: center;
-    font-size: 16px;
-    white-space: pre-wrap;
+    justify-content: center;
+    align-content: center;
+    display: flex;
 }
 
 .project:hover {
-    cursor: pointer;
+    cursor: default;
     transform: scale(1.025);
+}
+
+.project-content {
+    position: absolute;
+    height: calc((75vw / 3) - 40px);
+    width: calc((75vw / 3) - 40px);
+    border-radius: 10px;
+    margin: 15px;
+    color: var(--yellow);
+    font-size: 16px;
+    white-space: pre-wrap;
+    justify-content: center;
+    display: flex;
+    background-color: transparent;
+}
+
+.project-title {
+    position: absolute;
+    font-size: 24px;
+    color: var(--yellow);
+    top: 0;
+    background-color: transparent;
+    text-align: center;
+}
+
+.project-description {
+    position: absolute;
+    color: white;
+    background-color: transparent;
+    top: 25%;
+    flex-direction: column;
+    height: calc((75vw / 3) - 40px);
+    width: calc((75vw / 3) - 40px);
+    display: flex;
+    font-size: 16px;
 }
 
 .project-read-more {
     position: absolute;
     border: var(--yellow) 2px solid;
     border-radius: 10px;
-    top: 50%;
-    left: 50%;
-    background-color: var(--darkgray);
-    color: var(--yellow)
+    color: white;
+    padding: 5px;
+    transition: 0.5s ease;
+    bottom: 15%;
+    background-color: transparent;
+}
+
+.project-read-more:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .page-title-container {

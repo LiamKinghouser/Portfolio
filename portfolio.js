@@ -41,7 +41,7 @@ function setProjects() {
 
             for (let i = 0; i < projects.length; i++) {
                 let project = new Project(projects[i].name, projects[i].description)
-                projectElements[i].innerText = project.getName() + "\n\n" + project.getDescription()
+                //projectElements[i].innerText = project.getName() + "\n\n" + project.getDescription()
             }
         })
         .catch(error => console.log(error));
