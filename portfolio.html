@@ -12,48 +12,58 @@
         <script src="portfolio.js"></script>
     </head>
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="./index.html">home</a></li>
-                    <li><a href="./portfolio.html">portfolio</a></li>
-                    <a href="./index.html" id="logo">
-                        <ion-icon src="icons/logo.svg"></ion-icon>
-                    </a>
-                    <li><a href="./about.html">about</a></li>
-                    <li><a href="./contact.html">contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div id="socials-container"></div>
-        <div id="container">
-            <div class="page-title-container">
-                <div class="page-title">portfolio</div>
-            </div>
-            <div id="projects-container">
-                <div class="project">
-                    <div class="project-content">
-                        <div class="project-title">Auto Code Verify</div>
-                        <div class="project-description">Chrome Extension that automatically shows a popup with verification codes sent to the users email</div>
-                        <button class="project-read-more">Read More</button>
-                    </div>
+        <div id="page-content">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="./index.html">home</a></li>
+                        <li><a href="./portfolio.html">portfolio</a></li>
+                        <a href="./index.html" id="logo">
+                            <ion-icon src="icons/logo.svg"></ion-icon>
+                        </a>
+                        <li><a href="./about.html">about</a></li>
+                        <li><a href="./contact.html">contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="socials-container"></div>
+            <div id="container">
+                <div class="page-title-container">
+                    <div class="page-title">portfolio</div>
                 </div>
-                <div class="project"></div>
-                <div class="project"></div>
-                <div class="project"></div>
+                <div id="projects-container">
+                    <div class="project">
+                        <div class="project-content">
+                            <div class="project-title"></div>
+                            <div class="project-description"></div>
+                            <button class="project-read-more" onclick="openProjectPopup(this.parentElement.parentElement)">Read More</button>
+                        </div>
+                    </div>
+                    <div class="project"></div>
+                    <div class="project"></div>
+                    <div class="project"></div>
 
-                <div class="project"></div>
-                <div class="project"></div>
-                <div class="project"></div>
-                <div class="project"></div>
+                    <div class="project"></div>
+                    <div class="project"></div>
+                    <div class="project"></div>
+                    <div class="project"></div>
 
-                <div class="project"></div>
-                <div class="project"></div>
-                <div class="project"></div>
-                <div class="project"></div>
+                    <div class="project"></div>
+                    <div class="project"></div>
+                    <div class="project"></div>
+                    <div class="project"></div>
+                </div>
+            </div>
+            <div id="footer-info-container-left">© Liam Kinghouser 2023</div>
+        </div>
+        <div id="project-popup">
+            <div id="project-popup-content">
+                <div id="project-popup-divider"></div>
+
+                <button id="project-popup-x" onclick="closeProjectPopup()">
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
             </div>
         </div>
-        <div id="footer-info-container-left">© Liam Kinghouser 2023</div>
-        <footer></footer>
     </body>
 </html>

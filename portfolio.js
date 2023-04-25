@@ -3,6 +3,11 @@ let socials = ["github", "twitter", "spigot"]
 let socialLinks = ["https://github.com/LiamKinghouser", "https://twitter.com/liamkinghouser", "https://www.spigotmc.org/members/juvoo.987014/#resources"]
 
 window.onload = function() {
+    setSocials()
+    setProjects()
+}
+
+function setSocials() {
     let socialsContainer = document.getElementById('socials-container')
 
     for (let i = 0; i < socials.length; i++) {
@@ -26,9 +31,6 @@ window.onload = function() {
 
         socialsContainer.appendChild(social)
     }
-
-
-    setProjects()
 }
 
 function setProjects() {
@@ -40,13 +42,21 @@ function setProjects() {
             let projects = data.projects
 
             for (let i = 0; i < projects.length; i++) {
+                let projectElement = projectElements[i]
+                if (projectElement.childNodes.length === 0) continue;
+
+                let projectContent = projectElement.children[0].children
+                console.log(projectElement.children[0])
+                let projectTitle = projectContent[0]
+                let projectDescription = projectContent[1]
+
                 let project = new Project(projects[i].name, projects[i].description)
-                //projectElements[i].innerText = project.getName() + "\n\n" + project.getDescription()
+
+                projectTitle.innerText = project.getName()
+                projectDescription.innerText = project.getDescription()
             }
         })
         .catch(error => console.log(error));
-
-    console.log(parseFloat("3.936"))
 }
 
 class Project {
@@ -63,4 +73,15 @@ class Project {
     getDescription() {
         return this.description;
     }
+}
+
+function openProjectPopup(element) {
+    let projectPopup = document.getElementById('project-popup')
+    projectPopup.style.display = 'flex'
+    document.getElementById('page-content').style.opacity = '50%';
+}
+
+function closeProjectPopup() {
+    document.getElementById('project-popup').style.display = 'none'
+    document.getElementById('page-content').style.opacity = '100%';
 }
