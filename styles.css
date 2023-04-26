@@ -271,7 +271,7 @@ nav ul li a:not([data-attr="ion-icon"]):hover {
     text-align: center;
 }
 
-.project-description {
+.project-snippet {
     position: absolute;
     color: white;
     background-color: transparent;
@@ -353,4 +353,24 @@ nav ul li a:not([data-attr="ion-icon"]):hover {
     border-radius: 2px;
 }
 
-#project-popup-image
+#project-popup-image-container {
+    position: absolute;
+    right: 0.25vw;
+    top: 0.75vh;
+    height: 78vh;
+    width: 39vw;
+    background-color: transparent;
+    border: var(--yellow) 2px solid;
+    border-radius: 10px;
+}
+
+#project-popup-description-container {
+    position: absolute;
+    left: 0.25vw;
+    top: 0.75vh;
+    height: 78vh;
+    width: 39vw;
+    background-color: transparent;
+    border: var(--yellow) 2px solid;
+    border-radius: 10px;
+}

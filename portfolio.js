@@ -48,12 +48,12 @@ function setProjects() {
                 let projectContent = projectElement.children[0].children
                 console.log(projectElement.children[0])
                 let projectTitle = projectContent[0]
-                let projectDescription = projectContent[1]
+                let projectSnippet = projectContent[1]
 
-                let project = new Project(projects[i].name, projects[i].description)
+                let project = new Project(projects[i].name, projects[i].snippet)
 
                 projectTitle.innerText = project.getName()
-                projectDescription.innerText = project.getDescription()
+                projectSnippet.innerText = project.getSnippet()
             }
         })
         .catch(error => console.log(error));
@@ -61,13 +61,18 @@ function setProjects() {
 
 class Project {
 
-    constructor(name, description) {
+    constructor(name, snippet, description) {
         this.name = name;
+        this.snippet = snippet;
         this.description = description;
     }
 
     getName() {
         return this.name;
+    }
+
+    getSnippet() {
+        return this.snippet;
     }
 
     getDescription() {
