@@ -16,50 +16,36 @@
             <header>
                 <nav>
                     <ul>
-                        <li><a href="./index.html">home</a></li>
-                        <li><a href="./portfolio.html">portfolio</a></li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./portfolio.html">Portfolio</a></li>
                         <a href="./index.html" id="logo">
                             <ion-icon src="icons/logo.svg"></ion-icon>
                         </a>
-                        <li><a href="./about.html">about</a></li>
-                        <li><a href="./contact.html">contact</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </header>
             <div id="socials-container"></div>
             <div id="container">
                 <div class="page-title-container">
-                    <div class="page-title">portfolio</div>
+                    <div class="page-title">Portfolio</div>
                 </div>
-                <div id="projects-container">
-                    <div class="project">
-                        <div class="project-content">
-                            <div class="project-title"></div>
-                            <div class="project-snippet"></div>
-                            <button class="project-read-more" onclick="openProjectPopup(this.parentElement.parentElement)">Read More</button>
-                        </div>
-                    </div>
-                    <div class="project"></div>
-                    <div class="project"></div>
-                    <div class="project"></div>
-
-                    <div class="project"></div>
-                    <div class="project"></div>
-                    <div class="project"></div>
-                    <div class="project"></div>
-
-                    <div class="project"></div>
-                    <div class="project"></div>
-                    <div class="project"></div>
-                    <div class="project"></div>
-                </div>
+                <div id="projects-container"></div>
             </div>
             <div id="footer-info-container-left">© Liam Kinghouser 2023</div>
+            <div id="footer-info-container-right">
+                <button id="random-project-button" onclick="openRandomProject()">
+                    <ion-icon name="dice-outline"></ion-icon>
+                </button>
+            </div>
         </div>
         <div id="project-popup">
             <div id="project-popup-content">
-                <div id="project-popup-divider"></div>
-                <div id="project-popup-image-container"></div>
+
+                <div id="project-popup-image-container">
+                    <img src="projects/images/map_camera.png" alt=""/>
+                </div>
                 <div id="project-popup-description-container"></div>
                 <button id="project-popup-x" onclick="closeProjectPopup()">
                     <ion-icon name="close-outline"></ion-icon>

@@ -112,6 +112,16 @@ nav ul li a:not([data-attr="ion-icon"]):hover {
     background-color: transparent;
 }
 
+#footer-info-container-right {
+    position: fixed;
+    color: white;
+    font-size: 12px;
+    float: right;
+    bottom: 12px;
+    right: 0;
+    background-color: transparent;
+}
+
 #container {
     top: 25%;
     position: absolute;
@@ -172,6 +182,36 @@ nav ul li a:not([data-attr="ion-icon"]):hover {
     background-color: transparent;
     cursor: default;
     padding: 0 80px 0 80px;
+}
+
+#down-arrow {
+    border: transparent 2px solid;
+    position: fixed;
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+    display: flex;
+    font-size: 30px;
+    transition: color 0.75s ease;
+    left: calc(50% - 27px);
+    bottom: 10px;
+}
+
+#down-arrow ion-icon {
+    background-color: transparent;
+}
+
+#down-arrow:hover {
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+#plugin-information-box {
+    top: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: transparent;
 }
 
 #socials-container {
@@ -237,7 +277,7 @@ nav ul li a:not([data-attr="ion-icon"]):hover {
     position: relative;
     height: calc((75vw / 3) - 10px);
     border-radius: 10px;
-    background-color: var(--darkgray);
+    background-color: black;
     transition: 0.5s ease;
     justify-content: center;
     align-content: center;
@@ -285,20 +325,20 @@ nav ul li a:not([data-attr="ion-icon"]):hover {
 
 .project-read-more {
     position: absolute;
-    border: var(--yellow) 2px solid;
-    border-radius: 10px;
+    border: none;
     color: white;
     padding: 5px;
     transition: 0.5s ease;
     bottom: 15%;
-    font-size: inherit;
     font-family: inherit;
     background-color: transparent;
+    font-size: 26px;
 }
 
 .project-read-more:hover {
-    transform: scale(1.05);
+    color: var(--yellow);
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 #project-popup {
@@ -309,7 +349,7 @@ nav ul li a:not([data-attr="ion-icon"]):hover {
     top: 10vh;
     border: var(--yellow) 2px solid;
     border-radius: 10px;
-    background-color: var(--darkgray);
+    background-color: black;
     display: none;
 }
 
@@ -355,22 +395,52 @@ nav ul li a:not([data-attr="ion-icon"]):hover {
 
 #project-popup-image-container {
     position: absolute;
-    right: 0.25vw;
-    top: 0.75vh;
+    right: 1vw;
+    top: 1vh;
     height: 78vh;
-    width: 39vw;
-    background-color: transparent;
-    border: var(--yellow) 2px solid;
+    width: 38vw;
+    border: 1px solid var(--yellow);
     border-radius: 10px;
+    background-color: transparent;
+}
+
+#project-popup-image-container img {
+    position: relative;
+    max-width: 38vw;
+    border-radius: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #project-popup-description-container {
     position: absolute;
-    left: 0.25vw;
-    top: 0.75vh;
+    left: 1vw;
+    top: 1vh;
     height: 78vh;
-    width: 39vw;
-    background-color: transparent;
-    border: var(--yellow) 2px solid;
+    width: 38vw;
+    border: 1px solid var(--yellow);
     border-radius: 10px;
+    background-color: transparent;
+    color: white;
+}
+
+
+#random-project-button {
+    border: transparent 2px solid;
+    position: relative;
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+    display: flex;
+    font-size: 30px;
+    transition: color 0.75s ease;
+}
+
+#random-project-button ion-icon {
+    background-color: transparent;
+}
+
+#random-project-button:hover {
+    color: var(--yellow);
+    cursor: pointer;
 }

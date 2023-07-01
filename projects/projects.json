@@ -3,14 +3,58 @@
 
     {
       "name": "Map Camera",
-      "snippet": "Minecraft plugin that lets users create a live updating map of their screen for other players to see",
-      "description": "",
-      "images": ""
+      "snippet": "Minecraft Spigot Plugin that lets users create a live updating map of their screen for other players to see",
+      "description": "Minecraft Spigot Plugin that lets users create a live updating map of their screen for other players to see",
+      "images": [ "./projects/images/map_camera.png" ]
     },
+
     {
       "name": "Auto Code Verify",
       "snippet": "Chrome Extension that automatically shows a popup with verification codes sent to the users email",
-      "description": ""
+      "description": "Chrome Extension that automatically shows a popup with verification codes sent to the users email",
+      "images": [ "./projects/images/map_camera.png" ]
+    },
+
+    {
+      "name": "Wordle Helper",
+      "snippet": "Chrome Extension that prevents the user from typing letters marked as absent in Wordle",
+      "description": "Chrome Extension prevents the user from typing letters marked as absent in Wordle",
+      "images": [ "./projects/images/wordle_helper.png" ]
+    },
+
+    {
+      "name": "Death Shuffle",
+      "snippet": "Minecraft Spigot Plugin Minigame in which the players compete to die in a given way",
+      "description": "Minecraft Spigot Plugin Minigame in which the players compete to die in a given way",
+      "images": [ "./projects/images/map_camera.png" ]
+    },
+
+    {
+      "name": "PTCGO Code Farmer",
+      "snippet": "Java program that scans recently posted Pokémon YouTube videos for QR Codes that are redeemed for products in the online game",
+      "description": "Java program that scans recently posted Pokémon YouTube videos for QR Codes that are redeemed for products in the online game",
+      "images": [ "./projects/images/map_camera.png" ]
+    },
+
+    {
+      "name": "YouTube Chapter Skip",
+      "snippet": "Chrome Extension that adds browser keyboard shortcut to skip to next chapter of YouTube video",
+      "description": "Chrome Extension that adds browser keyboard shortcut to skip to next chapter of YouTube video",
+      "images": [ "./projects/images/map_camera.png" ]
+    },
+
+    {
+      "name": "Minecraft Eye Controller",
+      "snippet": "Minecraft Mod that allows the user to control their players camera direction with their eyes",
+      "description": "Minecraft Mod that allows the user to control their players camera direction with their eyes",
+      "images": [ "./projects/images/map_camera.png" ]
+    },
+
+    {
+      "name": "Computer Notifier",
+      "snippet": "Java Android App that shows phone notifications on a computer via the Java companion desktop program",
+      "description": "Java Android App that shows phone notifications on a computer via the Java companion desktop program",
+      "images": [ "./projects/images/map_camera.png" ]
     }
   ]
 }

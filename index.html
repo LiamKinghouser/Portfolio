@@ -8,19 +8,20 @@
         <link rel="stylesheet" href="styles.css">
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="script.js"></script>
     </head>
     <body>
         <header>
             <nav>
                 <ul>
-                    <li><a href="./index.html">home</a></li>
-                    <li><a href="./portfolio.html">portfolio</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./portfolio.html">Portfolio</a></li>
                     <a href="./index.html" id="logo">
                         <ion-icon src="icons/logo.svg"></ion-icon>
                     </a>
-                    <li><a href="./about.html">about</a></li>
-                    <li><a href="./contact.html">contact</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -30,14 +31,12 @@
                 <h1>Liam Kinghouser</h1>
                 <p>Bringing new ideas to life since 2020</p>
             </div>
-            <div id="skills-container">
-                <div class="skill">Minecraft Innovation</div>
-                <div class="skill-separator">|</div>
-                <div class="skill">Java</div>
-                <div class="skill-separator">|</div>
-                <div class="skill">Web Design</div>
-            </div>
         </div>
+        <button id="down-arrow" onclick="scrollDown()">
+            <ion-icon name="chevron-down-outline"></ion-icon>
+        </button>
+
+        <div id="plugin-information-box"></div>
         <div id="footer-info-container-left">© Liam Kinghouser 2023</div>
         <footer></footer>
     </body>
