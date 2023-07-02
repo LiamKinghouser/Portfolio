@@ -184,7 +184,7 @@ nav ul li a:not([data-attr="ion-icon"]):hover {
     padding: 0 80px 0 80px;
 }
 
-#down-arrow {
+#page-arrow {
     border: transparent 2px solid;
     position: fixed;
     padding: 10px;
@@ -192,25 +192,46 @@ nav ul li a:not([data-attr="ion-icon"]):hover {
     background-color: transparent;
     display: flex;
     font-size: 30px;
-    transition: color 0.75s ease;
+    transition: color, opacity 0.75s ease;
     left: calc(50% - 27px);
     bottom: 10px;
+    z-index: 5;
 }
 
-#down-arrow ion-icon {
+#page-arrow ion-icon {
     background-color: transparent;
 }
 
-#down-arrow:hover {
+#page-arrow:hover {
     color: var(--yellow);
     cursor: pointer;
 }
 
 #plugin-information-box {
     top: 100%;
-    height: 100%;
-    width: 100%;
+    height: 90%;
+    width: 75%;
     position: absolute;
+    background: black;
+    left: 12.5%;
+    right: 12.5%;
+}
+
+#plugin-downloads-count {
+    font-size: 40px;
+    font-family: "Astro Space", sans-serif;
+    color: white;
+    background: transparent;
+    padding: 20px;
+
+    border: 3px solid;
+    border-image: linear-gradient(to right, var(--darkgray), black);
+    border-image-slice: 1;
+}
+
+#plugin-downloads-label {
+    font-size: 10px;
+    color: white;
     background: transparent;
 }
 

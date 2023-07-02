@@ -28,23 +28,53 @@ window.onload = function() {
     }
 
     document.addEventListener("scroll", (event) => {
-        
+        let scrollDistance = getScrollDistance()
+        if (scrollDistance <= 2) {
+            window.requestAnimationFrame(function() {
+                let element = document.getElementById('page-arrow')
+                element.querySelector('ion-icon').setAttribute('name', 'chevron-down-outline')
+                element.style.opacity = '100%'
+            })
+        }
+        else if (scrollDistance >= 98) {
+            window.requestAnimationFrame(function() {
+                let element = document.getElementById('page-arrow')
+                element.querySelector('ion-icon').setAttribute('name', 'chevron-up-outline')
+                element.style.opacity = '100%'
+            })
+        }
+        else {
+            window.requestAnimationFrame(function() {
+                document.getElementById('page-arrow').style.opacity = '0%'
+            })
+        }
+    })
+
+    updatePluginDownloads().then()
+    setInterval(updatePluginDownloads, 5000)
+}
+
+function getScrollDistance() {
+    let scrollDistance = document.scrollingElement.scrollTop;
+    let pageHeight = document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight;
+    return (scrollDistance / pageHeight) * 100;
+}
+
+function scrollArrow() {
+    let name = document.getElementById('page-arrow').querySelector('ion-icon').getAttribute('name')
+    let distance = 0
+    if (name === 'chevron-down-outline') distance = $(document).height()
+    scroll({
+        top: distance,
+        behavior: "smooth"
     })
 }
 
-function scrollDown() {
-    scroll({
-        top: $(document).height(),
-        behavior: "smooth"
-    });
-}
+async function updatePluginDownloads() {
+    let downloads = await getTotalPluginDownloads()
+    downloads = downloads.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 
-function updatePluginDownloads() {
-    let downloads = getTotalPluginDownloads().toString()
-
-
-
-    setInterval(updatePluginDownloads, 5000)
+    document.getElementById('plugin-downloads-count').innerText = downloads
 }
 
 async function getTotalPluginDownloads() {
@@ -66,7 +96,6 @@ async function getTotalPluginDownloads() {
                 downloads += parseInt(pluginDownloads)
             }
         }
-        console.log(downloads)
 
         return downloads
     } catch (error) {

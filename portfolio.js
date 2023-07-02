@@ -143,7 +143,7 @@ function openProjectPopup(project) {
 
 function closeProjectPopup() {
     document.getElementById('project-popup').style.display = 'none'
-    document.getElementById('page-content').style.opacity = '100%';
+    document.getElementById('page-content').style.opacity = '100%'
 }
 
 class Project {
