@@ -217,7 +217,7 @@ nav ul li a:not([data-attr="ion-icon"]):hover {
     right: 12.5%;
 }
 
-#plugin-downloads-count {
+#plugin-downloads-container {
     font-size: 40px;
     font-family: "Astro Space", sans-serif;
     color: white;
@@ -225,12 +225,20 @@ nav ul li a:not([data-attr="ion-icon"]):hover {
     padding: 20px;
 
     border: 3px solid;
-    border-image: linear-gradient(to right, var(--darkgray), black);
+    border-image: linear-gradient(to right, var(--yellow), black);
     border-image-slice: 1;
 }
 
+#plugin-downloads-count {
+    font-size: 40px;
+    font-family: "Astro Space", sans-serif;
+    color: white;
+    transition: opacity 1s ease;
+}
+
 #plugin-downloads-label {
-    font-size: 10px;
+    font-size: 12px;
+    font-family: "Astro Space", sans-serif;
     color: white;
     background: transparent;
 }

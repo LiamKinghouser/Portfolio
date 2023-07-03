@@ -27,7 +27,7 @@ window.onload = function() {
         socialsContainer.appendChild(social)
     }
 
-    document.addEventListener("scroll", (event) => {
+    document.addEventListener("scroll", () => {
         let scrollDistance = getScrollDistance()
         if (scrollDistance <= 2) {
             window.requestAnimationFrame(function() {
@@ -72,16 +72,28 @@ function scrollArrow() {
 
 async function updatePluginDownloads() {
     let downloads = await getTotalPluginDownloads()
+
+    // put commas in downloads
     downloads = downloads.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 
-    document.getElementById('plugin-downloads-count').innerText = downloads
+    let downloadsCountElement = document.getElementById('plugin-downloads-count')
+
+    // if old downloads is different from new downloads
+    let shouldAnimate = downloadsCountElement.innerText !== downloads
+
+    if (shouldAnimate) downloadsCountElement.style.opacity = '0%'
+
+    setTimeout(function () {
+        downloadsCountElement.innerText = downloads.toString()
+        if (shouldAnimate) downloadsCountElement.style.opacity = '100%'
+    }, 500)
 }
 
 async function getTotalPluginDownloads() {
     let url = 'https://api.spiget.org/v2/authors/987014/resources?size=10000'
 
     try {
-        let response = await fetch(url, {})
+        let response = await fetch(url)
         let text = await response.text()
 
         let downloads = 0
