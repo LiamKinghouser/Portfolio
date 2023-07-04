@@ -55,6 +55,13 @@
       "snippet": "Java Android App that shows phone notifications on a computer via the Java companion desktop program",
       "description": "Java Android App that shows phone notifications on a computer via the Java companion desktop program",
       "images": [ "./projects/images/map_camera.png" ]
+    },
+
+    {
+      "name": "Package Track",
+      "snippet": "Chrome Extension that adds track with FedEx and UPS links to selection context menu",
+      "description": "Chrome Extension that adds track with FedEx and UPS links to selection context menu",
+      "images": [ "./projects/images/package_track.jpg" ]
     }
   ]
 }
