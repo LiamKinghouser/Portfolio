@@ -61,7 +61,7 @@
       "name": "Package Track",
       "snippet": "Chrome Extension that adds track with FedEx and UPS links to selection context menu",
       "description": "Chrome Extension that adds track with FedEx and UPS links to selection context menu",
-      "images": [ "./projects/images/package_track.jpg" ]
+      "images": [ "./projects/images/package_track.png" ]
     }
   ]
 }
