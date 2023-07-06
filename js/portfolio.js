@@ -1,46 +1,15 @@
-let socials = ["github", "twitter", "spigot"]
-
-let socialLinks = ["https://github.com/LiamKinghouser", "https://twitter.com/liamkinghouser", "https://www.spigotmc.org/members/juvoo.987014/#resources"]
-
 let projects = []
 
 let lastRandomProjectShown = undefined
 
-window.onload = function() {
-    setSocials()
+window.addEventListener('load', function() {
     setProjects()
-}
-
-function setSocials() {
-    let socialsContainer = document.getElementById('socials-container')
-
-    for (let i = 0; i < socials.length; i++) {
-        let social = document.createElement('a')
-        social.setAttribute('href', socialLinks[i])
-        social.setAttribute('target', '_blank')
-        social.classList.add('social-link')
-
-        if (socials[i] === "spigot") {
-            let icon = document.createElement('ion-icon')
-            icon.setAttribute('src', 'icons/spigot.svg')
-
-            social.appendChild(icon)
-            socialsContainer.appendChild(social)
-            continue
-        }
-        let icon = document.createElement('ion-icon')
-        icon.setAttribute('name', 'logo-' + socials[i])
-
-        social.appendChild(icon)
-
-        socialsContainer.appendChild(social)
-    }
-}
+})
 
 function setProjects() {
     let projectsContainer = document.getElementById('projects-container')
 
-    fetch('./projects/projects.json')
+    fetch('../data/projects/projects.json')
         .then(response => response.json())
         .then(data => {
             let projectsData = data.projects
@@ -74,6 +43,7 @@ function setProjects() {
 
                 // add on click listener to read more button
                 projectReadMore.onclick = function() {
+                    // scroll to top of page when project popup opened
                     document.body.scrollTop = document.documentElement.scrollTop = 0;
                     openProjectPopup(project)
                 }
@@ -95,7 +65,7 @@ function setProjects() {
         .catch(error => console.log(error));
 }
 
-// TODO: fix
+// TODO: check
 function openRandomProject() {
     // initialize indexes array
     let indexes = []

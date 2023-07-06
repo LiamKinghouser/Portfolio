@@ -1,0 +1,180 @@
+:root {
+    --yellow: #ffde7a;
+    --darkgray: #333333;
+}
+
+@font-face {
+    font-family: "Proxima Nova Extra Thin";
+    src: url("../fonts/Proxima-Nova-Extra-Condensed/Demo_Fonts/Fontspring-DEMO-proximanovacond-semibold.otf");
+}
+
+@font-face {
+    font-family: "Proxima Nova Extra Condensed Bold";
+    src: url("../fonts/Proxima-Nova-Extra-Condensed/Demo_Fonts/Fontspring-DEMO-proximanova-bold.otf");
+}
+
+@font-face {
+    font-family: "Astro Space";
+    src: url("../fonts/a-astro-space-font/AstroSpace-eZ2Bg.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background: black;
+
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: 'Proxima Nova Extra Condensed Bold', sans-serif;
+    font-size: 18px;
+
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#page-content {
+}
+
+h1 {
+    cursor: default;
+    background-color: transparent;
+}
+
+p {
+    cursor: default;
+    background-color: transparent;
+}
+
+header {
+    padding: 20px;
+    align-content: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 20px 40px;
+}
+
+nav ul li a:not([data-attr="ion-icon"]) {
+    color: white;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.75s ease;
+}
+
+nav ul li a:not([data-attr="ion-icon"]):hover {
+    color: var(--yellow);
+}
+
+#logo {
+    border: transparent 2px solid;
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    font-size: 60px;
+    transition: font-size 0.75s ease;
+    color: white;
+}
+
+#footer-info-container-left {
+    position: fixed;
+    color: white;
+    font-size: 12px;
+    float: left;
+    bottom: 30px;
+    padding-left: 20px;
+    background-color: transparent;
+}
+
+#footer-info-container-right {
+    position: fixed;
+    color: white;
+    font-size: 12px;
+    float: right;
+    bottom: 12px;
+    right: 0;
+    background-color: transparent;
+}
+
+#container {
+    top: 25%;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+}
+
+#socials-container {
+    position: fixed;
+    border: var(--yellow) 2px solid;
+    margin-top: calc(50vh - 200px);
+    margin-left: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    z-index: 2;
+    background-color: transparent;
+}
+
+.social-link {
+    border: transparent 2px solid;
+    position: relative;
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+    display: flex;
+    font-size: 30px;
+    transition: color 0.75s ease;
+}
+
+.social-link ion-icon {
+    background-color: transparent;
+}
+
+.social-link:hover {
+    color: var(--yellow);
+}
+
+.page-title-container {
+    position: absolute;
+    width: 75vw;
+    height: fit-content;
+    bottom: 60px;
+}
+
+.page-title {
+    position: absolute;
+    left: 0;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    font-size: 30px;
+    line-height: 30px;
+}
