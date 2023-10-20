@@ -1,19 +1,28 @@
 {
-  "about_initial_description": "",
+  "about": {
+    "about_initial_description": "",
 
-  "about_fun_facts_list": [
-    "• 17 year old student attending the University of Kansas",
-    "\n• Plans to major in Computer Science",
-    "\n• Enjoys creating solutions to modern problems",
-    "\n• Enjoys creating solutions to modern problems",
-    "\n• Enjoys creating solutions to modern problems",
-    "\n• Enjoys creating solutions to modern problems",
-    "\n• Enjoys creating solutions to modern problems",
-    "\n• Enjoys creating solutions to modern problems"
-  ],
+    "about_fun_facts_list": [
+      "• 17 year old student attending the University of Kansas",
+      "\n• Plans to major in Computer Science",
+      "\n• Enjoys creating solutions to modern problems",
+      "\n• Enjoys creating solutions to modern problems",
+      "\n• Enjoys creating solutions to modern problems",
+      "\n• Enjoys creating solutions to modern problems",
+      "\n• Enjoys creating solutions to modern problems",
+      "\n• Enjoys creating solutions to modern problems"
+    ]
+  },
 
   "index": {
+    "page_title": "Liam Kinghouser",
     "quote": "Audaces fortuna iuvat",
-    "quote_link": "https://en.wikipedia.org/wiki/Nothing_comes_from_nothing"
+    "quote_link": "https://en.wikipedia.org/wiki/Fortune_favours_the_bold",
+
+    "plugin_downloads_label": "Plugin Downloads"
+  },
+
+  "misc": {
+    "footer_info_left": "© Liam Kinghouser 2023"
   }
 }
