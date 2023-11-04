@@ -1,0 +1,87 @@
+#mockups-container {
+    position: absolute;
+    width: 75vw;
+    height: fit-content;
+    display: grid;
+    gap: 15px 15px;
+    grid-template-columns: calc((75vw / 3) - 10px) calc((75vw / 3) - 10px) calc((75vw / 3) - 10px);
+}
+
+.mockup {
+    position: relative;
+    height: calc((75vw / 3) - 10px);
+    border-radius: 10px;
+    background-color: black;
+    transition: 0.5s ease;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+
+.mockup:hover {
+    cursor: default;
+}
+
+.mockup-content {
+    position: relative;
+    height: calc((75vw / 3) - 40px);
+    width: calc((75vw / 3) - 40px);
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 15px;
+    color: var(--yellow);
+    font-size: 16px;
+    white-space: pre-wrap;
+    justify-content: center;
+    display: flex;
+    background-color: transparent;
+}
+
+.mockup-content-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 65%;
+    align-self: center;
+}
+
+.mockup-content-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    align-self: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.mockup-content-image-container img:hover {
+    transform: scale(1.01);
+}
+
+.mockup-title {
+    position: absolute;
+    font-size: 24px;
+    font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif;
+    color: var(--yellow);
+    top: 5%;
+    background-color: transparent;
+    text-align: center;
+}
+
+.mockup-download {
+    position: absolute;
+    border: none;
+    color: white;
+    padding: 5px;
+    transition: 0.5s ease;
+    bottom: 5%;
+    font-family: inherit;
+    background-color: transparent;
+    font-size: 26px;
+}
+
+.mockup-download:hover {
+    color: var(--yellow);
+    cursor: pointer;
+    transform: scale(1.1);
+}
