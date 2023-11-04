@@ -1,6 +1,8 @@
 :root {
     --yellow: #ffde7a;
     --darkgray: #333333;
+    --background: black;
+    --font: white;
 }
 
 @font-face {
@@ -21,7 +23,8 @@
 * {
     margin: 0;
     padding: 0;
-    background: black;
+    background: var(--background);
+    color: var(--font);
 
     -webkit-user-select: none; /* Chrome/Safari */
     -moz-user-select: none; /* Firefox */
@@ -82,7 +85,6 @@ nav ul li {
 }
 
 nav ul li a:not([data-attr="ion-icon"]) {
-    color: white;
     position: relative;
     text-decoration: none;
     transition: color 0.75s ease;
@@ -172,7 +174,6 @@ nav ul li a:not([data-attr="ion-icon"]):hover {
 .page-title {
     position: absolute;
     left: 0;
-    color: white;
     width: fit-content;
     height: fit-content;
     font-size: 30px;

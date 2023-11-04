@@ -18,9 +18,9 @@
     background-color: transparent;
 }
 
-#container {
-    top: 25%;
+#page-title-container-home {
     position: absolute;
+    bottom: calc(50% - (78.2px / 2));
     width: 100%;
     display: flex;
     justify-content: center;
@@ -28,7 +28,7 @@
 }
 
 #header-container {
-    position: absolute;
+    position: relative;
     width: fit-content;
     height: fit-content;
     text-align: center;
@@ -39,7 +39,7 @@
     font-family: "Astro Space", "sans-serif";
     font-size: 48px;
     color: white;
-    padding: 20px;
+    margin-block: 0;
 }
 
 #header-container p a {

@@ -62,6 +62,13 @@
       "snippet": "Chrome Extension that adds track with FedEx and UPS links to selection context menu",
       "description": "Chrome Extension that adds track with FedEx and UPS links to selection context menu",
       "images": [ "../data/projects/images/package_track.png" ]
+    },
+
+    {
+      "name": "Voice To Chat",
+      "snippet": "Minecraft Mod that allows the player to send chat messages with their voice",
+      "description": "Minecraft Mod that allows the player to send chat messages with their voice",
+      "images": [ "../data/projects/images/package_track.png" ]
     }
   ]
 }

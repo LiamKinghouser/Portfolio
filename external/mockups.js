@@ -67,6 +67,7 @@ function setMockups() {
 function downloadMockup(downloadLink) {
     const a = document.createElement('a');
     a.href = downloadLink
+    console.log(downloadLink.split("/")[-1])
     a.download = downloadLink.split("/")[-1]
 
     a.style.display = 'none';

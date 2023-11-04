@@ -1,5 +1,60 @@
 window.addEventListener('load', function() {
-    setQuote()
+    preparePage()
+})
+
+function preparePage() {
+    // fetch string data from strings.json
+    fetch('../data/strings/strings.json')
+        .then(response => response.json())
+        .then(data => {
+            // set page title
+            let pageTitleContainerHome = document.createElement('div')
+            pageTitleContainerHome.id = 'page-title-container-home'
+
+            let headerContainer = document.createElement('div')
+            headerContainer.id = 'header-container'
+
+            let h1 = document.createElement('h1')
+
+            // replace with strings.json usage TODO: implement strings.json usage to all js
+            h1.innerText = data.index.page_title
+            headerContainer.appendChild(h1)
+
+            let p = document.createElement('p')
+
+            headerContainer.appendChild(h1)
+            headerContainer.appendChild(p)
+
+            pageTitleContainerHome.appendChild(headerContainer)
+
+            document.body.appendChild(pageTitleContainerHome)
+
+            let pageTitleContainerHomeHeight = pageTitleContainerHome.offsetHeight
+            let headerHeight = document.querySelector('header').offsetHeight
+
+            let topValue = `calc(100% - (${headerHeight}px + (${pageTitleContainerHomeHeight} / 2)))`
+
+            pageTitleContainerHome.style.top = topValue
+
+
+            // set quote
+            let quote = data.index.quote
+            let quoteLink = data.index.quote_link
+
+            let headerContainerP = document.querySelector('#header-container p')
+
+            let a = document.createElement('a')
+            a.setAttribute('href', quoteLink)
+            a.setAttribute('target', '_blank')
+            a.textContent = quote
+
+            headerContainerP.appendChild(a)
+
+
+            // set plugin download label
+            document.querySelector('#plugin-downloads-label').textContent = data.index.plugin_downloads_label
+        })
+        .catch(error => console.log(error))
 
     document.addEventListener("scroll", () => {
         let scrollDistance = getScrollDistance()
@@ -26,22 +81,6 @@ window.addEventListener('load', function() {
 
     updatePluginDownloads().then()
     setInterval(updatePluginDownloads, 5000)
-})
-
-function setQuote() {
-    fetch('../data/strings/strings.json')
-        .then(response => response.json())
-        .then(data => {
-            let p = document.querySelector('#header-container p')
-
-            let a = document.createElement('a')
-            a.setAttribute('href', data.index.quote_link)
-            a.setAttribute('target', '_blank')
-            a.textContent = data.index.quote
-
-            p.appendChild(a)
-        })
-        .catch(error => console.log(error));
 }
 
 function getScrollDistance() {
